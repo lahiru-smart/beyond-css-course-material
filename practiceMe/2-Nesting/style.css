@@ -1,0 +1,22 @@
+ul li {
+  text-decoration: none;
+}
+
+/*-----------1. Parent Selector Start--------------*/
+.card {
+  background-color: black;
+}
+.card-title {
+  color: aqua;
+}
+
+/*-----------1. Parent Selector End--------------*/
+/*-----------2. Nesting Properties Start--------------*/
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/*-----------2. Nesting Properties End--------------*/
+
+/*# sourceMappingURL=style.css.map */
