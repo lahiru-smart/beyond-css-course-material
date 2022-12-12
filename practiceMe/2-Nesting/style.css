@@ -18,5 +18,56 @@ a {
 }
 
 /*-----------2. Nesting Properties End--------------*/
+/*-----------3. BEM Style Start--------------*/
+.card__title {
+  font-size: 3rem;
+}
+.card__subtitle {
+  font-size: 1.75rem;
+}
+.card__body {
+  font-size: 2rem;
+}
+
+/*-----------3. BEM Style End--------------*/
+/*-----------4. Trailing Parent Selector Start--------------*/
+p {
+  max-width: 60ch;
+}
+.text-centered p {
+  color: red;
+  margin-inline: auto;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+/*-----------4. Trailing Parent Selector End--------------*/
+/*-----------5. With Media Queries Start--------------*/
+.product-card {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+.product-card__title {
+  font-size: 1.5rem;
+}
+@media (min-width: 45em) {
+  .product-card {
+    padding: 0.75rem;
+  }
+}
+@media (min-width: 60rem) {
+  .product-card {
+    padding: 1rem;
+    display: flex;
+  }
+  .product-card__title {
+    font-size: 2.5rem;
+  }
+}
+
+/*-----------5. With Media Queries End--------------*/
 
 /*# sourceMappingURL=style.css.map */
