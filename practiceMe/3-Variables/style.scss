@@ -1,0 +1,86 @@
+/*-----------1. Variable Intro with custom properties START--------------*/
+
+$clr-primary: purple;
+
+.title {
+  color: $clr-primary;
+}
+
+a {
+  color: $clr-primary;
+}
+
+/*-----------1. Variable Intro with custom properties END--------------*/
+
+
+/*-----------2. Variables defined by variables START--------------*/
+$clr-primary: #ff0000;
+$clr-secondary: #0000ff;
+
+$gradient: linear-gradient(45deg, $clr-primary, $clr-secondary);
+
+body {
+    background: $gradient;
+}
+
+/*-----------2. Variables defined by variables END--------------*/
+
+
+/*-----------3. Variables and the cascade START--------------*/
+// Locally Scoped
+.header {
+    $clr-primary: blue;
+  
+    &-nav-link {
+      // this would work
+      color: $clr-primary;
+    }
+  }
+
+//   Globally Scoped
+$clr-primary: red;
+
+.header {
+  $clr-secondary: pink !global;
+
+  &-nav-link {
+    color: $clr-secondary;
+  }
+}
+
+.header .title {
+  color: $clr-secondary;
+}
+/*-----------3. Variables and the cascade END--------------*/
+
+
+
+/*-----------4. Variables as breakpoints START--------------*/
+$bp-medium: 55em;
+$bp-large: 75em;
+
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'sidebar-one'
+    'sidebar-two'
+    'footer';
+
+  @media (min-width: $bp-medium) {
+    grid-template-areas:
+      'header header'
+      'main sidebar-one'
+      'main sidebar-two'
+      'footer footer';
+  }
+
+  @media (min-width: $bp-large) {
+    grid-template-areas:
+      'header header header'
+      'main sidebar-one sidebar-two'
+      'footer footer footer';
+  }
+}
+/*-----------4. Variables as breakpoints END--------------*/

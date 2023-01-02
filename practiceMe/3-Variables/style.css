@@ -1,0 +1,49 @@
+/*-----------1. Variable Intro with custom properties START--------------*/
+.title {
+  color: purple;
+}
+
+a {
+  color: purple;
+}
+
+/*-----------1. Variable Intro with custom properties END--------------*/
+/*-----------2. Variables defined by variables START--------------*/
+body {
+  background: linear-gradient(45deg, #ff0000, #0000ff);
+}
+
+/*-----------2. Variables defined by variables END--------------*/
+/*-----------3. Variables and the cascade START--------------*/
+.header-nav-link {
+  color: blue;
+}
+
+.header-nav-link {
+  color: pink;
+}
+
+.header .title {
+  color: pink;
+}
+
+/*-----------3. Variables and the cascade END--------------*/
+/*-----------4. Variables as breakpoints START--------------*/
+.main-grid {
+  display: grid;
+  grid-template-areas: "header" "main" "sidebar-one" "sidebar-two" "footer";
+}
+@media (min-width: 55em) {
+  .main-grid {
+    grid-template-areas: "header header" "main sidebar-one" "main sidebar-two" "footer footer";
+  }
+}
+@media (min-width: 75em) {
+  .main-grid {
+    grid-template-areas: "header header header" "main sidebar-one sidebar-two" "footer footer footer";
+  }
+}
+
+/*-----------4. Variables as breakpoints END--------------*/
+
+/*# sourceMappingURL=style.css.map */
