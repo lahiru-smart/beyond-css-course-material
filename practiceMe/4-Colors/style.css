@@ -1,0 +1,20 @@
+/*-----------Sass Color Functions--------------*/
+.bg-red {
+  background-color: hsl(5deg, 72%, 53%);
+}
+
+.bg-red {
+  background-color: rgba(51, 68, 85, 0.5);
+}
+
+.semi-transparent-background {
+  background-color: rgba(34, 0, 255, 0.5);
+}
+
+.bg-red-50 {
+  background-color: rgba(221, 63, 49, 0.5);
+}
+
+/*-----------Sass Color Functions--------------*/
+
+/*# sourceMappingURL=style.css.map */
