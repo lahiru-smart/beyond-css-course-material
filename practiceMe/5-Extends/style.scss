@@ -1,0 +1,45 @@
+/*-----------Extend as Style Blocks--------------*/
+
+.bg-dark {
+  background: black;
+  padding: 1rem;
+}
+
+.inverted-colors {
+  @extend .bg-dark;
+  color: white;
+}
+
+.call-to-action {
+  @extend .bg-dark;
+  color: yellow;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*-----------Extend as Style Blocks--------------*/
+
+
+/*-----------Extend as Placeholder--------------*/
+$clr-primary: dodgerblue;
+$clr-secondary: firebrick;
+$clr-accent: limegreen;
+
+%uppercase-bold-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.accent-text {
+  color: $clr-accent;
+  @extend %uppercase-bold-text;
+}
+
+.eyebrow {
+  color: $clr-primary;
+  font-size: 0.8625rem;
+  @extend %uppercase-bold-text;
+}
+
+/*-----------Extend as Placeholder--------------*/
