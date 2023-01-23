@@ -1,0 +1,67 @@
+.text-red {
+  color: red;
+}
+
+/*-----------Using Math--------------*/
+.width-200 {
+  width: 200px;
+}
+
+/*-----------Using Math--------------*/
+/*-----------Challenge 1 - With Nesting--------------*/
+.box-red-100 {
+  background: red;
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+.box-green-150 {
+  background: green;
+  width: 150px;
+  aspect-ratio: 1/1;
+}
+.box-blue-200 {
+  background: blue;
+  width: 200px;
+  aspect-ratio: 1/1;
+}
+
+/*-----------Challenge 1 - With Nesting--------------*/
+/*-----------Challenge 2 - With Mixin--------------*/
+.box-red-100px {
+  aspect-ratio: 1/1;
+  background-color: red;
+  width: 100px;
+}
+
+.box-green-150px {
+  aspect-ratio: 1/1;
+  background-color: green;
+  width: 150px;
+}
+
+.box-blue-200px {
+  aspect-ratio: 1/1;
+  background-color: blue;
+  width: 200px;
+}
+
+/*-----------Challenge 2 - With Mixin--------------*/
+/*-----------With Nested Children--------------*/
+.hover-me {
+  background: black;
+  color: white;
+}
+.hover-me__title {
+  color: limegreen;
+}
+.hover-me:hover, .hover-me:focus {
+  background: white;
+  color: black;
+}
+.hover-me:hover .hover-me__title, .hover-me:focus .hover-me__title {
+  color: black;
+}
+
+/*-----------With Nested Children--------------*/
+
+/*# sourceMappingURL=style.css.map */

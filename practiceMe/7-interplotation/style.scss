@@ -1,0 +1,83 @@
+$color-primary: red;
+$color-secondary: blue;
+$bg: background-color;
+
+.text-#{$color-primary} {
+  color: $color-primary;
+  $bg: $color-secondary;
+}
+
+/*-----------Using Math--------------*/
+$width: 100;
+
+.width-#{$width * 2} {
+  width: $width * 2px;
+}
+
+/*-----------Using Math--------------*/
+
+/*-----------Challenge 1 - With Nesting--------------*/
+
+$red: red;
+$green: green;
+$blue: blue;
+$width: 100px;
+
+.box {
+  &-#{$red}-100 {
+    background: $red;
+    width: $width;
+    aspect-ratio: 1 / 1;
+  }
+  &-#{$green}-150 {
+    background: $green;
+    width: $width * 1.5;
+    aspect-ratio: 1 / 1;
+  }
+  &-#{$blue}-200 {
+    background: $blue;
+    width: $width * 2;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/*-----------Challenge 1 - With Nesting--------------*/
+
+/*-----------Challenge 2 - With Mixin--------------*/
+@mixin box($color, $multiplier: 1) {
+  .box-#{$color}-#{$multiplier * $width} {
+    aspect-ratio: 1 / 1;
+    background-color: $color;
+    width: $width * $multiplier;
+  }
+}
+
+@include box($red);
+@include box($green, 1.5);
+@include box($blue, 2);
+
+/*-----------Challenge 2 - With Mixin--------------*/
+
+/*-----------With Nested Children--------------*/
+.hover-me {
+  $parent: &;
+
+  background: black;
+  color: white;
+
+  &__title {
+    color: limegreen;
+  }
+
+  &:hover,
+  &:focus {
+    background: white;
+    color: black;
+
+    #{$parent}__title {
+      color: black;
+    }
+  }
+}
+
+/*-----------With Nested Children--------------*/

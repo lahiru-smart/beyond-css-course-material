@@ -9,3 +9,68 @@ body {
   text-align: center;
   padding: 10vh 0;
 }
+
+// 1
+@mixin gradient($deg: -45deg, $clr-1: red, $clr-2: blue) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+.section-one {
+  @include gradient();
+  color: white;
+}
+.section-two {
+  @include gradient($deg: -72deg, $clr-1: purple, $clr-2: limegreen);
+  color: white;
+}
+.section-three {
+  @include gradient($deg: 0deg, $clr-1: orange, $clr-2: yellow);
+}
+
+// 2
+@mixin pseudo-underline($width: 5rem, $height: 1px, $bg: black, $margin: 2rem) {
+  width: $width;
+  height: $height;
+  background-color: $bg;
+  margin: $margin auto;
+  content: "";
+  display: block;
+}
+
+.title {
+  &::after {
+    @include pseudo-underline();
+  }
+}
+
+// 3
+@mixin ui-element($size, $color, $bg-color, $hover-color, $hover-bg-color) {
+  display: inline-block;
+  padding: $size $size * 3;
+  color: $color;
+  background-color: $bg-color;
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+  }
+}
+
+.button-one {
+  @include ui-element(
+    $size: 1em,
+    $color: white,
+    $bg-color: black,
+    $hover-color: black,
+    $hover-bg-color: white
+  );
+}
+.button-two {
+  @include ui-element(
+    $size: 0.25em,
+    $color: #006eff,
+    $bg-color: #0f0f1d,
+    $hover-color: #0f0f1d,
+    $hover-bg-color: #006eff
+  );
+}
