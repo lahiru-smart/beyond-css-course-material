@@ -1,0 +1,19 @@
+/*-----------Built in functions--------------*/
+// color module
+
+@use "sass:color";
+$clr-accent: #23ef91;
+
+.bg-accent {
+  background: $clr-accent;
+}
+
+.bg-accent-dark {
+  background: color.scale($clr-accent, $lightness: -40%);
+}
+
+.bg-accent-light {
+  background: color.scale($clr-accent, $lightness: 40%);
+}
+
+/*-----------Built in functions--------------*/
